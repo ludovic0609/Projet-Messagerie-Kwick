@@ -1,0 +1,339 @@
+
+
+/* Variable en CSS */
+:root {
+    --font_page: #e5e5e5;
+
+    --password_good: #28a745;
+
+    --password_weak: #ffc107;
+
+    --password_strong: #d39e00;
+
+    --password_short: #dc3545;
+
+}
+
+/* Index.html  */
+
+
+body {
+    background-color: var(--font_page);
+    font-family: 'Comic Sans MS', cursive;
+   
+}
+
+h1 {
+    text-align: center;
+    margin-top:3rem;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-top:1rem;
+    width: 100%;
+}
+
+
+h1 img {
+
+    max-width: 6%;
+
+ 
+}
+.container {
+    padding-top:1rem;
+}
+
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.login-form-1{
+    padding: 5%;
+    
+    background-color: #a8dadc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3%;
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+    
+    
+    background: #0E789B;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3%;
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.error-form-1 > span{
+    font-size: 16px;
+}
+.error-form-2 > span{
+    font-size: 16px;
+}
+
+span.field-icon {
+    position: relative;
+  display: inline-block;
+  cursor: pointer;
+  
+    bottom:30px;
+    left:90%;
+    
+
+
+    
+  }
+
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+    margin-top:1rem;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+    margin-top:1rem;
+}
+
+footer {
+   
+    background-color: #adb5bd;
+    width : 100%;
+  
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	
+}
+footer p {
+    
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Short {  
+    width: 100%;  
+    background-color: var(--password_short);
+    margin-top: 5px;  
+    height: 3px;  
+    color: var(--password_short);
+    font-weight: 500;  
+    font-size: 14px;  
+}  
+.Weak {  
+    width: 100%;  
+    background-color: var(--password_weak);
+    margin-top: 5px;  
+    height: 3px;  
+    color: var(--password_weak); 
+    font-weight: 500;  
+    font-size: 14px;  
+}  
+.Good {  
+    width: 100%;  
+    background-color: var(--password_good);
+    margin-top: 5px;  
+    height: 3px;  
+    color: var(--password_good);
+    font-weight: 500;  
+    font-size: 14px;  
+}  
+.Strong {  
+    width: 100%;  
+    background-color: var(--password_strong);
+    margin-top: 5px;  
+    height: 3px;  
+    color: var(--password_strong);
+    font-weight: 500;  
+    font-size: 14px;  
+}  
+
+/* tchat.html  */
+
+
+.col-8, .col-4{
+    
+    border:1px solid;
+    border-radius: 2px;
+    
+    height: 550px;
+  
+    
+    padding-left:1rem;
+    overflow-y:scroll;
+    
+}
+
+#form_send_message{
+  
+    text-align: center;
+}
+
+
+
+#messages li , #show-users ul li  {
+    list-style-type: none;
+   
+    overflow-wrap: break-word;
+    width: 90%;
+    line-height: 2rem;
+    padding-left:0;
+    
+
+    margin: 0;
+	padding: 20px 0 20px 50px;
+	list-style: none;
+	background-image: url("../images/avatar.svg");
+	background-repeat: no-repeat;
+	background-position: left 1rem;
+    background-size: 40px;
+    
+
+    
+
+
+
+
+
+}
+#messages li {
+    border: solid 2px;
+    border-radius: 10px;
+    margin-top:5px;
+    
+    background-color: white;
+    
+}
+
+
+#show-users ul li:first-child{
+    font-size:18px;
+    font-weight: bold;
+    background-image: none;
+    padding:0;
+    
+}
+#show-users ul li:not(:first-child) {
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+#messages li .user_message_end{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.justify-content-left [type="text"]{
+    
+   
+   width: 30rem;
+
+     
+}
+
+#messages li .username_name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+#messages .user{
+    
+    background-color: #CBCAC3;
+}
+
+
+
+
+
+ul li .timer {
+    font-size: 12px;
+    color: gray;
+}
+
+@media (max-width: 800px) {
+  .row{
+      display: block;
+      
+
+  }
+  
+ 
+  .col-8, .col-4{
+    max-width: 80%;
+   
+    margin-left:3rem;
+
+  }
+
+  .justify-content-left [type="text"]{
+    
+    width: 300px;
+ 
+      
+ }
+ #menu {
+     display:flex;
+    
+}
+
+
+
+}
+
+
+
+
+#menu { 
+    padding:10px 10px 10px 10px; 
+    width: auto;
+    height: auto;
+    background-color: 	#989898;
+    
+ 
+}
+.welcome{
+        float:left;
+}
+.logout{
+    float:right;
+}
+
+#timer-session-ctnr {
+    font-size: 14px;
+    text-align: center;
+    margin-top:1rem;
+    width: 100%;
+}
