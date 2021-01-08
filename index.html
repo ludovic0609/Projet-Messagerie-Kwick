@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <title>Messagerie Instantannée Kwick </title>
+    <link rel="icon" href="images/logo.ico" />
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+
+
+    <script  defer src="js/jquery-3.5.1.js"></script>
+    
+    <script  defer src="js/bootstrap.min.js"></script>
+    
+    <script  defer src="js/bootstrap-show-password.min.js"></script>
+
+    <script  defer src="js/util.js"></script>
+    <script  defer src="js/index.js"></script>
+    
+
+
+
+</head>
+
+<body>
+
+
+    <h1>Kwick ! 
+        <span class="glyphicon glyphicon-user">
+            <img src="images/logo.png"  alt="Logo pour Kwick"> 
+        </span>
+    </h1>
+
+    <h2>Messagerie instantanée</h2>
+
+
+
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Se connecter au tchat</h3>
+                <form id="login_form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" maxlength="30" placeholder="Votre nom d'utilisateur"
+                            id="username_login" value="" required />
+                    </div>
+                    <div class="form-group">
+                
+                        <input type="password" maxlength="30" class="form-control" placeholder="Votre mot de passe"
+                            id="password_login"  value=""  required  />
+                            
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Se connecter" />
+                    </div>
+                    <div class="error-form-1">
+                        <span></span>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="col-md-6 login-form-2">
+                <h3>S'enregistrer</h3>
+                <form id="form_registrer">
+                    <div class="form-group">
+                        <input type="text" class="form-control" maxlength="30" placeholder="Un nom d'utilisateur"
+                            id="username_registrer" value="" required />
+                    </div>
+                    <div class="form-group">
+                       
+                        <input type="password" class="form-control" maxlength="30" placeholder="Un mot de passe"
+                            id="password_registrer"  value="" required  /> 
+                            <span  class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            
+                    </div>
+
+                    
+                    
+                   
+                    <div id="strengthMessage"></div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="S'enregistrer" />
+                    </div>
+                    <div class="error-form-2">
+                        <span></span>
+                    </div>
+                    <div class="succes-form-2">
+                        <span></span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <p><small>Copyright © 2021 - Tous droits réservés - CHARLIER Ludovic | <a href="#">Mentions légales</a> | <a
+                    href="#">CGU</a></small> </p><!-- Ouverture footer -->
+
+    </footer> <!-- Fermeture footer -->
+
+
+
+
+</body>
+
+</html>
