@@ -6,62 +6,75 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
+
     <title>Messagerie Instantannée Kwick </title>
-    <link rel="icon" href="images/logo.ico" />
+    <link rel="icon" href="images/favicon.ico" />
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 
-    <script  defer src="js/jquery-3.5.1.js"></script>
-    
-    <script  defer src="js/util.js"></script>
-    <script  defer src="js/tchat.js"></script>
-  
-    
+    <script defer src="js/jquery-3.5.1.js"></script>
 
-    
+    <script defer src="js/util.js"></script>
+    <script defer src="js/tchat.js"></script>
+
+
+
+
 
 </head>
 
 <body>
 
+
     <header>
         <!-- Fixed navbar -->
         <div id="menu">
-            <p class="welcome">Bienvenue, <b id="username"></b> <b id="timer-session-ctnr"></b>  </p>
+            <p class="welcome">Bienvenue, <b id="username"></b> <b id="timer-session-ctnr"></b> </p>
             <p class="logout"><input type="button" value="Se deconnecter" id="logout"></p>
             <div style="clear:both"></div>
         </div>
-      </header>
+    </header>
 
-   
 
-    
-    
 
-    
+
+
+
+
     <div class="container">
 
         <div class="row justify-content-left">
-            
+
             <form id="form_send_message">
-            
+
                 <input type="text" id="message" placeholder="Entrer votre message" name="message" maxlength="140"
                     required><input type="submit" id="send_message" class="button-submit" value="Envoyer" />
             </form>
-        
+
+            <select name="SelectedMessage" id="SelectedMessage">
+                <option value="all">Tous les messages</option>
+                <option value="last_2days">Les messages depuis 2 jours</option>
+                <option value="last_24hours"> Les messages des dernières 24 heures</option>
+                <option value="last_4hours"> Les messages des 4 dernières heures</option>
+                <option value="last_30min">Les messages depuis 30 minutes</option>
+            </select>
+
         </div>
 
 
         <div class="row justify-content-center">
-            
-                
-            
+
+
+
 
             <div class="col-8">
-                
-                
+
+
                 <ul id="messages"></ul>
+
+
+
+
             </div>
             <div class="col-4">
                 <div id="show-users">
@@ -73,12 +86,11 @@
         </div>
     </div>
 
-    <footer>
 
-        <p><small>Copyright © 2021 - Tous droits réservés - CHARLIER Ludovic | <a href="#">Mentions légales</a> | <a
-                    href="#">CGU</a></small> </p><!-- Ouverture footer -->
 
-    </footer> <!-- Fermeture footer -->
+
+
+
 
 
 </body>
