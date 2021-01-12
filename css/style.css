@@ -229,8 +229,11 @@ footer p {
     margin-top:5px;
     
     background-color: white;
+    margin-left:-50px;
     
 }
+
+
 
 
 #show-users ul li:first-child{
@@ -272,6 +275,7 @@ footer p {
 #messages .user{
     
     background-color: #CBCAC3;
+    margin-left: 50px;
 }
 
 
@@ -282,38 +286,6 @@ ul li .timer {
     font-size: 12px;
     color: gray;
 }
-
-@media (max-width: 800px) {
-  .row{
-      display: block;
-      
-
-  }
-  
- 
-  .col-8, .col-4{
-    max-width: 80%;
-   
-    margin-left:3rem;
-
-  }
-
-  .justify-content-left [type="text"]{
-    
-    width: 300px;
- 
-      
- }
- #menu {
-     display:flex;
-    
-}
-
-
-
-}
-
-
 
 
 #menu { 
@@ -337,3 +309,39 @@ ul li .timer {
     margin-top:1rem;
     width: 100%;
 }
+
+#SelectedMessage {
+    margin-left:3rem;
+}
+
+/*  Les Media Queries */
+
+@media (max-width: 800px) {
+    .row{
+        display: block;
+        
+  
+    }
+    
+   
+    .col-8, .col-4{
+      max-width: 80%;
+     
+      margin-left:3rem;
+  
+    }
+  
+    .justify-content-left [type="text"]{
+      
+      width: 300px;
+   
+        
+   }
+   #menu {
+       display:flex;
+      
+  }
+  
+  
+  
+  }
