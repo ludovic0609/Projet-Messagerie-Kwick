@@ -7,7 +7,8 @@ const API_URL = "http://greenvelvet.alwaysdata.net/kwick/api/";
 const FRENCH_DAYS = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 const FRENCH_MONTH = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
-const DATE_DAY = new Date().getDay();
+const DATE_DAY = new Date().getDate();
+const DATE_MONTH = new Date().getMonth();
 
 const $error_form_signin = document.getElementById('start-session-btn');
 
@@ -24,7 +25,7 @@ const $span_sucess_form_registrer = $(".succes-form-2> span");
 let username = "";
 let password = "";
 let user_token = "";
-let local_user_name ="";
+let local_user_name = "";
 let id_user = "";
 
 
@@ -36,7 +37,11 @@ const FRENCH_FORMATED_DATE = timeStamp => {
     timeStamp = timeStamp * 1000; // Pour convertir en millisecondes
     const date = new Date(timeStamp);
 
-    const day = FRENCH_DAYS[date.getDay()];
+
+    let day = FRENCH_DAYS[date.getDay()];
+
+
+
     let dayNbr = date.getDate();
     if (dayNbr == 1) {
         dayNbr += 'er';
@@ -44,22 +49,33 @@ const FRENCH_FORMATED_DATE = timeStamp => {
     const month = FRENCH_MONTH[date.getMonth()];
     const year = date.getFullYear();
     const hours = date.getHours();
-    const minutes = date.getMinutes();
+    let minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
 
 
-    switch (date.getDay()) {
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+
+
+
+    switch (date.getDate()) {
         case DATE_DAY: // si le message est posté le jour même
             // code block
-            return ` Aujourd'hui à ${hours}h ${minutes}min ${seconds}s `;
+            return ` Aujourd'hui à ${hours}h${minutes} `;
             break;
-        case DATE_DAY - 1: // si le message est posté le jour d'avant
+        case (DATE_DAY - 1): // si le message est posté le jour d'avant
             // code block
-            return ` Hier à ${hours}h ${minutes}min ${seconds}s `;
+            if (date.getMonth() === DATE_MONTH) {
+                return ` Hier à ${hours}h${minutes} `;
+            } else return ` ${day} ${dayNbr} ${month} ${year}  à ${hours}h${minutes}`;
+
+
             break;
         default: // et sinon afficher la date du message
-            return ` ${day} ${dayNbr} ${month} ${year}  à ${hours}h ${minutes}min ${seconds}s `;
+            return ` ${day} ${dayNbr} ${month} ${year}  à ${hours}h${minutes}`;
         // code block
     }
 
@@ -125,9 +141,9 @@ var result_statut_server = $.ajax({
     },
     error: function (err) {
         //console.log("Le Service API est pour le moment indisponible.");
-        
+
         return err.status;
-        
+
     }
 });
 
@@ -153,7 +169,7 @@ function requestAjax(url, callback) {
     request.fail(function (e) {
         //console.log("Erreur de requete à l'API Kwick");
         //console.log(e);
-        
+
     });
 }
 
